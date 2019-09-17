@@ -2,6 +2,7 @@ package Application;
 
 import com.linecorp.bot.model.event.MessageEvent;
 import com.linecorp.bot.model.event.message.TextMessageContent;
+import com.linecorp.bot.model.message.Message;
 import com.linecorp.bot.model.message.TextMessage;
 import com.linecorp.bot.spring.boot.annotation.EventMapping;
 import com.linecorp.bot.spring.boot.annotation.LineMessageHandler;
@@ -15,9 +16,16 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
+//    @EventMapping
+//    public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
+//        System.out.println("event: " + event);
+//        return new TextMessage(event.getMessage().getText());
+//    }
+
     @EventMapping
-    public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
-        System.out.println("event: " + event);
-        return new TextMessage(event.getMessage().getText());
+    public Message handleTextMessage(MessageEvent<TextMessageContent> e) {
+        System.out.println("event: " + e);
+        TextMessageContent message = e.getMessage();
+        return new TextMessage(message.getText());
     }
 }
