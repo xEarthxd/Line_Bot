@@ -23,7 +23,7 @@ public class Application {
 //    }
 
     @EventMapping
-    public Message handleTextMessage(MessageEvent<TextMessageContent> e) {
+    public TextMessage handleTextMessage(MessageEvent<TextMessageContent> e) {
         System.out.println("event: " + e);
         TextMessageContent message = e.getMessage();
         return new TextMessage(message.getText());
