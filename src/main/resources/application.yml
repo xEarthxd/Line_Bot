@@ -1,0 +1,4 @@
+line.bot:
+  channel-token: 'qs3JY44gXMA7zuF54qT7SFtzzrACqW3Vql4h/ZrEJO62oUkUI9wJ/cMCFCiW0Y9qAN/7h8ql5GJyflzOT54zqxWVm862gFg+XEu00MZ9puMjpmy7ZKUE5/93zabKRWF3rvxj3S9uajMw9Vmg7iAxagdB04t89/1O/w1cDnyilFU='
+  channel-secret: 'd62d9e725462b3a0c0c2ea646477ca27'
+  handler.path: /callback
